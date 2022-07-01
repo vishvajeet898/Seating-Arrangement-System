@@ -239,7 +239,7 @@ public class ViewArrangement extends javax.swing.JPanel {
     try {
         // TODO add your handling code here:
         XSSFWorkbook workbook=new XSSFWorkbook();
-        FileOutputStream out= new FileOutputStream(new File("C:\\Users\\vishnu\\Pictures\\"+fname+".xlsx"));
+        FileOutputStream out= new FileOutputStream(new File(fname+".xlsx"));
         String url ="jdbc:mysql://localhost/sas?autoReconnect=true&serverTimezone=UTC&useSSL=False&allowPublicKeyRetrieval=true";
         Connection con = DriverManager.getConnection(url, "root", "");
         String sql="SELECT `room_no`, `c1_roll_no`, `c1_name`, `c2_roll_no`, `c2_name`, `c3_roll_no`, `c3_name` FROM `arrangement`";

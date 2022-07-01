@@ -236,8 +236,8 @@ public class Login extends javax.swing.JFrame {
         String ps;
         try{
             //Class.forName("com.mysql.jdbc.Driver");
-            String url ="jdbc:mysql://localhost/sas?autoReconnect=true&serverTimezone=UTC&useSSL=False&allowPublicKeyRetrieval=true";
-            try (Connection con = DriverManager.getConnection(url, "root", "")) {
+            //String url ="jdbc:mysql://localhost/sonoo","root/root"";
+            try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/sas","root","")) {
                 String sql="select * from login";
                 Statement st=con.createStatement();
                 ResultSet rs=st.executeQuery(sql);
